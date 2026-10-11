@@ -137,42 +137,131 @@
             "omni-man-are-you-sure (1).mp3", "omni-man-are-you-sure.mp3", "one-piece-angry.mp3", "one-piece-brooks-laugh-15-minutes.mp3", 
             "one-piece-gulp.mp3", "one-piece-ost-cornered-raid-host.mp3", "one_piece_ringtone_free_ringtones_for_cell_phones.mp3", 
             "oooh-a-piece-of-candy.mp3", "optimum-prides.mp3", "Outro PUmpme KICK.mp3", "Pennywise Soundboard.mp3", "poco-x3-phone.mp3", 
-            "pump-shotgun-fortnite-loud.mp3", "Punch - Gaming Sound Effect (HD) (320 kbps).mp3", "quiet-on-the-creek-saucy-santana.mp3", 
-            "raaaah.mp3", "rainbow-six-siege-quick-barricade-breach-audiotrimmer.mp3", "ransom-gay-version.mp3", "Rat dance Music.mp3", 
-            "raul_drTKdMV.mp3", "rdr2-low-honour-sound.mp3", "relaxed_scene.mp3", "ringtone-warkop-dki.mp3", "rip-my-granny-loud-asf.mp3", 
-            "rizz-sound-effect.mp3", "rizz-sounds.mp3", "roblox running.mp3", "roblox-death-sound_1.mp3", "romanceeeeeeeeeeeeee.mp3", 
-            "Ruko jaraa.mp3", "sad violin.mp3", "sad-meow-song.mp3", "samsung-estourado.mp3", "samsung-spaceline-notification.mp3", 
-            "Shah Rukh Khan Laughing.mp3", "SHEESH SOUND EFFECT.mp3", "shimmy-shimmy-ya-but-high-quality.mp3", "sigma.mp3", 
-            "slot-machine-jackpot-sound-effect.mp3", "snapchat-message.mp3", "snoopdoggmeme.mp3", "snore-mimimimimimi (1).mp3", 
-            "snore-mimimimimimi.mp3", "sonic-spring.mp3", "Spiderman Soundboard.mp3", "spiderman-meme-song.mp3", "spongebob-disappointed-sound-effect.mp3", 
-            "spongebob-fail.mp3", "spongebob-sad-song.mp3", "strawberry-elephant-steal-a-brainrot.mp3", "studio-audience-awwww-sound-fx.mp3", 
-            "sukunas-ryoiki-tenkai.mp3", "Super Mario Beedoo.mp3", "Taco aBell Bell.mp3", "taco-bell-bong-sfx.mp3", "talking-bennnn-noo.mp3", 
-            "tf2-bonk.mp3", "thats-lapis.mp3", "the_mountain-epic-build-137050.mp3", "throwing-sound-effect-davemadson.mp3", 
-            "ticking.mp3", "tiki-tiki-boosted.mp3", "tmpq7mpzzl9 (1).mp3", "tmpq7mpzzl9.mp3", "tmp_7901-951678082.mp3", 
-            "transponder_snail.mp3", "tung-tung-tung-sahur.mp3", "Twangy Boing.mp3", "uh.mp3", "undertakers-bell_2UwFCIe.mp3", 
-"untitled_bmEjZi2.mp3", "Valorant Loading Screen.mp3", "valorant-theme-extended-mp3cut_TE5PFlz.mp3", "very-loud-metal-pipe-drop.mp3",
-"videoplayback_y6EZG5Z.mp3", "vine boom.mp3", "voando-em-velocidade-one-piece.mp3", "wait-wait-wait-what-the-hell-legend-sound.mp3",
-"Warning Siren meme.mp3", "water-droplet-drip.mp3", "we-are-charlie-kirk-phone.mp3", "Wet_Fart_Meme_-Sound_Effect_HD(getmp3.pro).mp3",
-"what da dog doin.mp3", "what-bottom-text-meme-sanctuary-guardian-sound-effect-hd_tdDIUTg.mp3", "what-the-hellllllllllll.mp3",
-"white-tee-rizz.mp3", "white-tees-rizz.mp3", "whoosh.mp3", "wtf-sound_AUXiDNl.mp3", "y2mate.com - Acumalaka  sound effect.mp3",
-"y2mate.com - Boy what the hell boy talking Tom meme.mp3", "y2mate.com - gah dayum Extended sound.mp3", "y2mate.com - he walk.mp3",
-"y2mate.com - Spongebob sad face sound effect.mp3", "yara-yara-funk-loud.mp3", "yeet-sound-effect.mp3", "Yessir Sound Effect HD.mp3",
-"yo-phone-linging.mp3", "Yoshi_Mlem_-Sound_Effect_HD(getmp3.pro).mp3", "yowai-mo.mp3", "yt1s_wU4BGgD.mp3"
-];
-const grid = document.getElementById('soundboard');
-// Dynamically build the cards
-soundFiles.forEach((filename, index) => {
-// Clean up button title: remove file extensions and tidy up common symbols
-let cleanTitle = filename.replace('.mp3', '')
-.replace(/[-_]/g, ' ')
-.replace(/\(getmp3\.pro\)/gi, '')
-.replace(/320\s*kbps/gi, '')
-.replace(/sound\s*effect/gi, '')
-.replace(/hd/gi, '')
-.replace(/\s+/g, ' ')
-.trim();
-const colorClass = btn-${index % 4};
-const soundId = snd-${index};
-const card = document.createElement('div');
-card.className = 'sound-card';
-card.innerHTML = `
+            "pump-shotgun-fortnite-loud.mp3",            "Punch - Gaming Sound Effect (HD) (320 kbps).mp3",
+            "quiet-on-the-creek-saucy-santana.mp3",
+            "raaaah.mp3",
+            "rainbow-six-siege-quick-barricade-breach-audiotrimmer.mp3",
+            "ransom-gay-version.mp3",
+            "Rat dance Music.mp3",
+            "raul_drTKdMV.mp3",
+            "rdr2-low-honour-sound.mp3",
+            "relaxed_scene.mp3",
+            "ringtone-warkop-dki.mp3",
+            "rip-my-granny-loud-asf.mp3",
+            "rizz-sound-effect.mp3",
+            "rizz-sounds.mp3",
+            "roblox running.mp3",
+            "roblox-death-sound_1.mp3",
+            "romanceeeeeeeeeeeeee.mp3",
+            "Ruko jaraa.mp3",
+            "sad violin.mp3",
+            "sad-meow-song.mp3",
+            "samsung-estourado.mp3",
+            "samsung-spaceline-notification.mp3",
+            "Shah Rukh Khan Laughing.mp3",
+            "SHEESH SOUND EFFECT.mp3",
+            "shimmy-shimmy-ya-but-high-quality.mp3",
+            "sigma.mp3",
+            "slot-machine-jackpot-sound-effect.mp3",
+            "snapchat-message.mp3",
+            "snoopdoggmeme.mp3",
+            "snore-mimimimimimi (1).mp3",
+            "snore-mimimimimimi.mp3",
+            "sonic-spring.mp3",
+            "Spiderman Soundboard.mp3",
+            "spiderman-meme-song.mp3",
+            "spongebob-disappointed-sound-effect.mp3",
+            "spongebob-fail.mp3",
+            "spongebob-sad-song.mp3",
+            "strawberry-elephant-steal-a-brainrot.mp3",
+            "studio-audience-awwww-sound-fx.mp3",
+            "sukunas-ryoiki-tenkai.mp3",
+            "Super Mario Beedoo.mp3",
+            "Taco aBell Bell.mp3",
+            "taco-bell-bong-sfx.mp3",
+            "talking-bennnn-noo.mp3",
+            "tf2-bonk.mp3",
+            "thats-lapis.mp3",
+            "the_mountain-epic-build-137050.mp3",
+            "throwing-sound-effect-davemadson.mp3",
+            "ticking.mp3",
+            "tiki-tiki-boosted.mp3",
+            "tmpq7mpzzl9 (1).mp3",
+            "tmpq7mpzzl9.mp3",
+            "tmp_7901-951678082.mp3",
+            "transponder_snail.mp3",
+            "tung-tung-tung-sahur.mp3",
+            "Twangy Boing.mp3",
+            "uh.mp3",
+            "undertakers-bell_2UwFCIe.mp3",
+            "untitled_bmEjZi2.mp3",
+            "Valorant Loading Screen.mp3",
+            "valorant-theme-extended-mp3cut_TE5PFlz.mp3",
+            "very-loud-metal-pipe-drop.mp3",
+            "videoplayback_y6EZG5Z.mp3",
+            "vine boom.mp3",
+            "voando-em-velocidade-one-piece.mp3",
+            "wait-wait-wait-what-the-hell-legend-sound.mp3",
+            "Warning Siren meme.mp3",
+            "water-droplet-drip.mp3",
+            "we-are-charlie-kirk-phone.mp3",
+            "Wet_Fart_Meme_-_Sound_Effect_HD_(getmp3.pro).mp3",
+            "what da dog doin.mp3",
+            "what-bottom-text-meme-sanctuary-guardian-sound-effect-hd_tdDIUTg.mp3",
+            "what-the-hellllllllllll.mp3",
+            "white-tee-rizz.mp3",
+            "white-tees-rizz.mp3",
+            "whoosh.mp3",
+            "wtf-sound_AUXiDNl.mp3",
+            "y2mate.com - Acumalaka  sound effect.mp3",
+            "y2mate.com - Boy what the hell boy talking Tom meme.mp3",
+            "y2mate.com - gah dayum Extended sound.mp3",
+            "y2mate.com - he walk.mp3",
+            "y2mate.com - Spongebob sad face sound effect.mp3",
+            "yara-yara-funk-loud.mp3",
+            "yeet-sound-effect.mp3",
+            "Yessir Sound Effect HD.mp3",
+            "yo-phone-linging.mp3",
+            "Yoshi_Mlem_-_Sound_Effect_HD_(getmp3.pro).mp3",
+            "yowai-mo.mp3",
+            "yt1s_wU4BGgD.mp3"
+        ];
+
+        const grid = document.getElementById('soundboard');
+
+        // This loop builds the grid and automatically cleans up the titles
+        soundFiles.forEach((filename, index) => {
+            // Cleans up annoying junk tags from filenames automatically
+            let cleanTitle = filename
+                .replace('.mp3', '')
+                .replace(/[-_]/g, ' ')
+                .replace(/y2mate\.com\s*-\s*/gi, '')
+                .replace(/\(getmp3\.pro\)/gi, '')
+                .replace(/Sound\s*Effect\s*HD/gi, '')
+                .replace(/Gaming\s*Sound\s*Effect/gi, '')
+                .replace(/\(320\s*kbps\)/gi, '')
+                .replace(/\s+/g, ' ')
+                .trim();
+
+            const colorClass = `btn-${index % 4}`;
+            const soundId = `snd-${index}`;
+
+            const card = document.createElement('div');
+            card.className = 'sound-card';
+            card.innerHTML = `
+                <audio id="${soundId}" src="${filename}"></audio>
+                <button class="push-button ${colorClass}" onclick="playSound('${soundId}')"></button>
+                <div class="sound-title">${cleanTitle}</div>
+                <a href="${filename}" download="${filename}" class="download-link">💾 Download</a>
+            `;
+            grid.appendChild(card);
+        });
+
+        function playSound(id) {
+            let sound = document.getElementById(id);
+            sound.currentTime = 0; 
+            sound.play();
+        }
+    </script>
+</body>
+</html>
