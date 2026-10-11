@@ -225,12 +225,11 @@
             "Yoshi_Mlem_-_Sound_Effect_HD_(getmp3.pro).mp3",
             "yowai-mo.mp3",
             "yt1s_wU4BGgD.mp3"
-        ];
+               ];
 
         const grid = document.getElementById('soundboard');
 
-        // This loop builds the grid and automatically cleans up the titles
-               // This loop builds the grid, auto-cleans titles, and safely encodes URLs
+        // This loop builds the grid, auto-cleans titles, and safely encodes URLs
         soundFiles.forEach((filename, index) => {
             // Cleans up annoying junk tags from filenames automatically
             let cleanTitle = filename
@@ -261,40 +260,25 @@
             grid.appendChild(card);
         });
 
-            const colorClass = `btn-${index % 4}`;
-            const soundId = `snd-${index}`;
-
-            const card = document.createElement('div');
-            card.className = 'sound-card';
-            card.innerHTML = `
-                <audio id="${soundId}" src="${filename}"></audio>
-                <button class="push-button ${colorClass}" onclick="playSound('${soundId}')"></button>
-                <div class="sound-title">${cleanTitle}</div>
-                <a href="${filename}" download="${filename}" class="download-link">💾 Download</a>
-            `;
-            grid.appendChild(card);
-        });
-
-       <script>
-    // Smooth function to play and pause sounds dynamically on tap
-    function playSound(id) {
-        let sound = document.getElementById(id);
-        
-        // If the sound is already playing, pause it and reset to the beginning
-        if (!sound.paused) {
-            sound.pause();
-            sound.currentTime = 0;
-        } else {
-            // Stop ANY other sound currently playing on the board first
-            document.querySelectorAll('audio').forEach(audio => {
-                audio.pause();
-                audio.currentTime = 0;
-            });
+        // Toggle play/pause function to stop overlapping sounds
+        function playSound(id) {
+            let sound = document.getElementById(id);
             
-            // Play the clicked sound from the absolute beginning
-            sound.currentTime = 0; 
-            sound.play();
+            if (!sound.paused) {
+                sound.pause();
+                sound.currentTime = 0;
+            } else {
+                // Stop any other sound currently playing
+                document.querySelectorAll('audio').forEach(audio => {
+                    audio.pause();
+                    audio.currentTime = 0;
+                });
+                
+                // Play from the absolute beginning
+                sound.currentTime = 0; 
+                sound.play();
+            }
         }
-    }
-</script>
-
+    </script>
+</body>
+</html>
